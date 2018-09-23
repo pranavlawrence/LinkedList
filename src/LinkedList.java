@@ -17,16 +17,39 @@ public class LinkedList {
         size = 0;
         start = null;
     }
+    
+    // Inserting at First posotion
+    
+    
+    public void insertAtFirst(int val)
+    {
+        Node n;
+        n=new Node();
+        n.setData(val);
+        n.setNext(start);
+        size++;
+        
+    }
 
+    
+    // Method for checking if the list is empty or not 
+    
+    
     public boolean isEmpty() {
         if (start == null)
             return true;
         else 
             return false;               
     }
+    
+    
     public int getListSize(){
         return(size);
 }
+    
+    
+    //Method for viewing list
+    
     
     public void viewList(){
         Node t;
