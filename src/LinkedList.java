@@ -9,5 +9,25 @@
  * @author Pranav Aditya
  */
 public class LinkedList {
+
+    private int size;
+    private Node start;
+
+    public LinkedList() {
+        size = 0;
+        start = null;
+    }
+
+    public boolean isEmpty() {
+        if (start == null)
+            return true;
+        else 
+            return false;               
+    }
+    public int getListSize(){
+        return(size);
+}
+    
+    
     
 }
