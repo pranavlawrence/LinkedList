@@ -28,6 +28,19 @@ public class LinkedList {
         return(size);
 }
     
+    public void viewList(){
+        Node t;
+        if(isEmpty())
+            System.out.println("List is Empty");
+        else {
+            t=start;
+            for(int i=1;i<=size;i++)
+            {
+                System.out.println(" "+t.getData());
+                t=t.getNext();
+            }
+    }
     
+    }
     
 }
