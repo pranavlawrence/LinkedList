@@ -20,7 +20,9 @@ public class NewMain {
        
         Scanner sc=new Scanner(System.in);
         LinkedList list=new LinkedList();
-        while(true){
+        boolean flag=true;
+        while(flag){
+            System.out.println(" ");
             System.out.println("1.Add at starting position");
             System.out.println("2.Add at last position");
             System.out.println("3.Add at choice position");
@@ -28,6 +30,7 @@ public class NewMain {
             System.out.println("5.Delete Last position");
             System.out.println("6.Delete choice position");
             System.out.println("7.View list");
+            System.out.println("8.Exit");
             System.out.println("Enter your Choice");
             int choice=sc.nextInt();
             int position,val;
@@ -51,14 +54,21 @@ public class NewMain {
                         
                 case 4: list.deleteFirst();
                         break;
+                        
                 case 5: list.deleteLast();
                         break;
+                        
                 case 6: System.out.println("Enter Postition");
                         position=sc.nextInt();
                         list.deletePos(position);
                         break;
+                        
                 case 7: list.viewList();
                         break;
+                        
+                case 8: flag=false;
+                        break;
+                    
                 default:System.out.println("Invalid Choice");
             }
         }
