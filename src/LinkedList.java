@@ -18,6 +18,20 @@ public class LinkedList {
         start = null;
     }
     
+    
+    // Deleting at first position
+    
+    public void deleteFirst(){
+        if(start==null)
+            System.out.println("List is Empty");
+        else{
+            start=start.getNext();
+            size--;
+        }
+    }
+    
+    
+    
     // Inserting at First posotion
     
     
