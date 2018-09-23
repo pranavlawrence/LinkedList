@@ -18,6 +18,28 @@ public class LinkedList {
         start = null;
     }
     
+    //Deleting at last position
+    
+    public void deleteLast(){
+        if(start==null)
+            System.out.println("List is Empty");
+        else if(size==1){
+            start=null;
+            size--;
+        }
+        else{
+            Node t;
+            t=start;
+            for(int i=1;i<size-1;i++)
+                t=t.getNext();
+            t.setNext(null);
+            size--;
+        }
+    }
+    
+    
+    
+    
     
     // Deleting at first position
     
