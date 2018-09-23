@@ -30,7 +30,25 @@ public class LinkedList {
         size++;
         
     }
-
+    
+    // Inserting at Last position
+    
+    public void insertAtLast(int val)
+    {
+        Node n,t;
+        n=new Node();
+        n.setData(val);
+        t=start;
+        if(t==null)
+            start=n;
+        else{
+            while(t.getNext()!=null)
+                t=t.getNext();
+            t.setNext(n);
+        }
+        size++;
+    }
+            
     
     // Method for checking if the list is empty or not 
     
