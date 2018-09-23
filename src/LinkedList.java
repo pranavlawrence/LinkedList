@@ -38,6 +38,27 @@ public class LinkedList {
     }
     
     
+    //Deleting at choice position
+    
+    public void deletePos(int pos){
+        if(start==null)
+            System.out.println("list is Empty");
+        else if(pos<1||pos>size)
+            System.out.println("invalid position");
+        else if(pos==1)
+            deleteFirst();
+        else if(pos==size)
+            deleteLast();
+        else{
+            Node t,t1;
+            t=start;
+            for(int i=1;i<pos-1;i++)
+                t=t.getNext();
+            t1=t.getNext();
+            t.setNext(t1.getNext());
+            size--;
+        }
+    }
     
     
     
